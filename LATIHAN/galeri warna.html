@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Warna</title>
+</head>
+<style>
+    .container{
+        width: 400px;
+        height: 400px;
+        background-color: salmon;
+        margin: auto;
+    }
+    .kotak{
+        width: 400px;
+        height: 100px;
+        margin: auto;
+    }
+    .warna{
+        width: 96px;
+        height: 100px;
+        float: left;
+    }
+</style>
+
+<body>
+    
+    <div class="container" id="ganti"></div>
+        
+    <div class="kotak">
+            <div class="warna" type="button" id="kotak" onclick="coklat()" style="border: 2px solid brown;" ></div>
+            <div class="warna" type="button" id="kotak" onclick="kuning()" style="border: 2px solid peru" ></div>
+            <div class="warna" type="button" id="kotak" onclick="pink()" style="border: 2px solid pink;" ></div>
+            <div class="warna" type="button" id="kotak" onclick="ungu()" style="border: 2px solid purple;" ></div>
+    </div>
+
+    <script>
+        function coklat(){
+            document.getElementById('ganti').style.backgroundColor="brown";
+            }
+
+        function kuning(){
+            document.getElementById('ganti').style.backgroundColor="peru";
+        }
+
+        function pink(){
+            document.getElementById('ganti').style.backgroundColor="pink";
+        }
+
+        function ungu(){
+            document.getElementById('ganti').style.backgroundColor="purple";
+        }
+    </script>
+
+</body>
+</html>

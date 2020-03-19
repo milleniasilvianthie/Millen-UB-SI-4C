@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir</title>
+</head>
+
+<style>
+
+.display1{
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    background-color: rgba(0,0,0, 0.5);
+}
+.display2{
+    width: 80%;
+    height: 50px;
+    overflow: auto;
+    background-color: white;
+    
+}
+.display3{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: fixed;
+    overflow: none;
+    padding: 100px;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0, 0.5);
+}
+</style>
+
+<body>
+    
+    <div class="display1" id="display1">
+
+        <div class="display2">
+            <h3>Isi Kotak <button id="btn" style="float: right;" onclick="tutup()">X</button></h3>
+        </div>
+
+    </div>
+
+    <h2>Contoh Judul</h2>
+    <input type="button" onclick="operasiklik()" value="Tambah Data Baru"></input>
+
+    <script>
+
+        function operasiklik(){
+            document.getElementById("display1").className="display3";
+        }
+
+        function tutup(){
+            document.getElementById("display1").className="display1";
+        }
+    </script>
+    
+</body>
+</html>

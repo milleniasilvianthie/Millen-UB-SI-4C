@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoping Cart</title>
+</head>
+
+<style>
+.container{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+.header{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 5px;
+}
+.header h1{
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: coral;
+}
+.kanan{
+    width: 30%;
+    height: 200px;
+    background-color: coral;
+    float: left;
+    margin-top: 70px;
+}
+.kiri{
+    width: 70%;
+    height: 300px;
+    background-color: burlywood;
+    float: left;
+    margin-top: 70px;
+}
+.kotak{
+    width: 190px;
+    height: 190px;
+    margin: 5px 5px 5px 5px;
+    float: left;
+    background-color: sandybrown;
+}
+.kiri h4{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: brown;
+}
+</style>
+
+<body>
+    
+    <div class="container" id="container">
+
+        <div class="header">
+            <h1>VokasiPedia</h1>
+        </div>
+
+        <div class="kiri">
+            <div class="kotak">
+                <img src="foto1.jpg" alt="" width="100%"> 
+                <h4>Rp 35.000</h4>
+                <input type="button" onclick="" value="Beli"></input>
+            </div>
+            <div class="kotak">
+                <img src="foto2.jpg" alt="" width="100%"> 
+                <h4>Rp 45.000</h4>
+                <input type="button" onclick="" value="Beli"></input>
+            </div>
+            <div class="kotak">
+                <img src="foto3.jpg" alt="" width="100%"> 
+                <h4>Rp 55.000</h4>
+                <input type="button" onclick="" value="Beli"></input>
+            </div>
+            <div class="kotak">
+                <img src="foto4.jpg" alt="" width="100%"> 
+                <h4>Rp 65.000</h4>
+                <input type="button" onclick="" value="Beli"></input>
+            </div>
+        </div>
+
+        <div class="kanan" id="info">
+            <h3>Keranjang Belanja</h3>
+        </div>
+
+    </div>
+
+    <script>
+
+        var vm = new Vue({
+            el: '#container',
+            data: {
+                motor:[
+                {merek:'batik daun', harga:35000, image:'foto1.jpg'}
+                ,{merek:'batik batang', harga:45000, image:'foto2.jpg'}
+                ,{merek:'batik bunga', harga:55000, image:'foto3.jpg'}
+                ,{merek:'batik akar', harga:65000, image:'foto4.jpg'}
+                ],
+                keranjangharga:[],
+                keranjangmerek:[],
+            },
+        methods: {
+            addCart:function(merek){
+                // this.keranjangharga.push(harga);
+                this.keranjangmerek.push(merek);
+            },
+            removeCart:function(index){
+                this.keranjangmerek.splice(index,1)
+                this.keranjangharga.splice(index,1)
+            }
+        }})
+    
+    </script>
+
+</body>
+</html>

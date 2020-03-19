@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="vue.js"></script>
+<body>
+    
+    <!-- elemen container untuk aplikasi -->
+    <div id="app">
+        <!-- <input type="text" v-bind:value="message"></input> -->
+        <input type="text" v-model:value="message"></input>
+        <p>{{ message }}</p>
+    </div>
+
+
+<script>
+    var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hai, ini Vue!'
+  }
+})
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Foto</title>
+</head>
+<style>
+    .container{
+        width: 400px;
+        height: 400px;
+        background-color: gray;
+        margin: auto;
+    }
+    .kotak{
+        width: 400px;
+        height: 100px;
+        margin: auto;
+    }
+    .kotak .foto{
+        width: 100px;
+        height: 100px;
+        float: left;
+    }
+</style>
+
+<body>
+    
+    <div class="container" id="ganti">
+        <img src="" alt="" id="foto" width="100%">
+    </div>
+        
+    <div class="kotak">
+            <div class="foto" type="button" id="kotak" onclick="foto1()">
+                <img src="foto1.jpg" alt="" width="100%"> 
+            </div>
+            <div class="foto" type="button" id="kotak" onclick="foto2()">
+                <img src="foto2.jpg" alt="" width="100%">
+            </div>
+            <div class="foto" type="button" id="kotak" onclick="foto3()">
+                <img src="foto3.jpg" alt="" width="100%">
+            </div>
+            <div class="foto" type="button" id="kotak" onclick="foto4()">
+                <img src="foto4.jpg" alt="" width="100%">
+            </div>
+    </div>
+
+    <script>
+        function foto1(){
+            document.getElementById('foto').src="foto1.jpg";
+            }
+
+        function foto2(){
+            document.getElementById('foto').src="foto2.jpg";
+        }
+
+        function foto3(){
+            document.getElementById('foto').src="foto3.jpg";
+        }
+
+        function foto4(){
+            document.getElementById('foto').src="foto4.jpg";
+        }
+    </script>
+
+</body>
+</html>
